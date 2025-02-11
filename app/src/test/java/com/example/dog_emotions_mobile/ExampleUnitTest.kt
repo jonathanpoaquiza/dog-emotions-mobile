@@ -1,4 +1,4 @@
-package com.example.dog_emotions
+package com.example.dog_emotions_mobile
 
 import org.junit.Test
 

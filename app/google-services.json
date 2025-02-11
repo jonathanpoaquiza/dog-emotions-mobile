@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634952471604",
+    "project_id": "dog-emotions-mobile",
+    "storage_bucket": "dog-emotions-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634952471604:android:d6ae3b81f8f9049fe6a661",
+        "android_client_info": {
+          "package_name": "com.example.dog_emotions_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATfXjGKKVC21ahbhSD_2sYkpVkIdq4v4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

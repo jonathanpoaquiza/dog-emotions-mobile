@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "dog-emotions"
+rootProject.name = "dog-emotions-mobile"
 include(":app")
  

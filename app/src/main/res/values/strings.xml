@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">dog-emotions</string>
+    <string name="app_name">dog-emotions-mobile</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
