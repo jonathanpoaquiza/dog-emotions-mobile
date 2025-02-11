@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrudMascota">
+
+    <!-- Inputs para Mascota -->
+    <EditText
+        android:id="@+id/input_mascota_id"
+        android:layout_width="332dp"
+        android:layout_height="62dp"
+        android:hint="Ingrese ID de la mascota"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_nombre"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese nombre de la mascota"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_id"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_raza"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese raza de la mascota"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_nombre"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_edad"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese edad de la mascota"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_raza"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_peso"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese peso de la mascota"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_edad"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_tamaño"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese tamaño de la mascota"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_peso"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_color"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese color de la mascota"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_tamaño"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_latitud"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:hint="Ingrese latitud"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_color"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_mascota_longitud"
+        android:layout_width="328dp"
+        android:layout_height="66dp"
+        android:hint="Ingrese longitud"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_latitud"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Botones CRUD Mascota -->
+    <Button
+        android:id="@+id/btn_crear_mascota"
+        android:layout_width="245dp"
+        android:layout_height="52dp"
+        android:text="Crear Mascota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_mascota_longitud"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btn_actualizar_mascota"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Mascota"
+        app:layout_constraintTop_toBottomOf="@id/btn_crear_mascota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+    <Button
+        android:id="@+id/btn_eliminar_mascota"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Mascota"
+        app:layout_constraintTop_toBottomOf="@id/btn_actualizar_mascota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

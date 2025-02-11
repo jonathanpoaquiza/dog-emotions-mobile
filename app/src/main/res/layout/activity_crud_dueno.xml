@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrudDueno">
+
+    <!-- Inputs para Dueño -->
+    <EditText
+        android:id="@+id/input_dueno_id"
+        android:layout_width="332dp"
+        android:layout_height="62dp"
+        android:hint="Ingrese ID del dueño"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_dueno_nombre"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese nombre del dueño"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_id"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_dueno_correo"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese correo del dueño"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_nombre"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_dueno_celular"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
+        android:hint="Ingrese celular del dueño"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_correo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_dueno_latitud"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:hint="Ingrese latitud"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_celular"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/input_dueno_longitud"
+        android:layout_width="328dp"
+        android:layout_height="66dp"
+        android:hint="Ingrese longitud"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_latitud"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Botones CRUD Dueño -->
+
+    <Button
+        android:id="@+id/btn_crear_dueno"
+        android:layout_width="245dp"
+        android:layout_height="52dp"
+        android:text="Crear Dueño"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_dueno_longitud"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btn_actualizar_dueno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Dueño"
+        app:layout_constraintTop_toBottomOf="@id/btn_crear_dueno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+    <Button
+        android:id="@+id/btn_eliminar_dueno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Dueño"
+        app:layout_constraintTop_toBottomOf="@id/btn_actualizar_dueno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu"
+
     tools:context=".Menu">
 
+    <Button
+        android:id="@+id/btn_dueno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/skyblue"
+        android:fontFamily="casual"
+        android:text="Perfil dueño"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ubicacion"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mascota"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <Button
+        android:id="@+id/btn_mascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="casual"
+        android:text="Perfil mascota"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/skyblue"
+        app:layout_constraintBottom_toTopOf="@+id/btn_galeria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <Button
+        android:id="@+id/btn_ubicacion"
+        android:layout_width="138dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="156dp"
+        android:fontFamily="casual"
+        android:text="Ubicación"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/skyblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_galeria"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_galeria"
+        android:layout_width="117dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="156dp"
+        android:fontFamily="casual"
+        android:text="Galería"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/skyblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

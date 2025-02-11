@@ -12,7 +12,8 @@
         android:id="@+id/btn_login_firebase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="INICIAR SESIÓN"
+        android:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,13 +21,15 @@
 
     <Button
         android:id="@+id/btn_logout_firebase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Logout"
+        android:layout_width="139dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="44dp"
+        android:text="CERRAR SESIÓN"
         android:visibility="invisible"
+        android:backgroundTint="@color/blue"
+
         app:layout_constraintEnd_toEndOf="@+id/btn_login_firebase"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/btn_login_firebase"
         app:layout_constraintTop_toBottomOf="@+id/btn_login_firebase" />
 
