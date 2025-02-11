@@ -28,7 +28,7 @@ class FirebaseLogin : AppCompatActivity() {
     }
     fun seLogeo(res: IdpResponse){
         val nombre = FirebaseAuth.getInstance().currentUser?.displayName
-        cambiarInterfaz(View.INVISIBLE, View.VISIBLE, nombre!!)
+        cambiarInterfaz(View.INVISIBLE, View.VISIBLE, View.VISIBLE,nombre!!)
         if(res.isNewUser == true){
             registrarUsuarioPorPrimeraVez(res)
         }
@@ -37,12 +37,15 @@ class FirebaseLogin : AppCompatActivity() {
     fun cambiarInterfaz(
         visibilidadLogin:Int = View.VISIBLE,
         visibilidadLogout: Int = View.INVISIBLE,
+        visibilidadIngresar: Int = View.INVISIBLE,
         textoTextView:String = "Bienvenido"){
         val btnLogin = findViewById<Button>(R.id.btn_login_firebase)
         val btnLogout = findViewById<Button>(R.id.btn_logout_firebase)
+        val btnIngresar = findViewById<Button>(R.id.btn_ingresar)
         val tvBienvenida = findViewById<TextView>(R.id.tv_bienvenido)
         btnLogin.visibility = visibilidadLogin
         btnLogout.visibility = visibilidadLogout
+        btnIngresar.visibility = visibilidadIngresar
         tvBienvenida.text = textoTextView
     }
     // Registramos en nuestro sistema y ej enviamos correo etc etc
@@ -73,8 +76,14 @@ class FirebaseLogin : AppCompatActivity() {
         }
         val usuario = FirebaseAuth.getInstance().currentUser
         if(usuario !=null){
-            cambiarInterfaz(View.INVISIBLE, View.VISIBLE, usuario.displayName!!)
+            cambiarInterfaz(View.INVISIBLE, View.VISIBLE, View.VISIBLE, usuario.displayName!!)
         }
+
+        val botonIngresar= findViewById<Button>(R.id.btn_ingresar)
+        botonIngresar
+            .setOnClickListener {
+                irActividad(Menu::class.java)
+            }
     }
 
     fun irActividad(

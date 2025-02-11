@@ -9,7 +9,7 @@ class Mascota(
     val raza: String,
     val edad: Int,
     val peso: Double,
-    val tamaño: String,
+    val tamano: String,
     val color: String,
     val latitud: Double,  // Nueva propiedad latitud
     val longitud: Double  // Nueva propiedad longitud
@@ -33,7 +33,7 @@ class Mascota(
         parcel.writeString(raza)
         parcel.writeInt(edad)
         parcel.writeDouble(peso)
-        parcel.writeString(tamaño)
+        parcel.writeString(tamano)
         parcel.writeString(color)
         parcel.writeDouble(latitud)  // Escribir latitud
         parcel.writeDouble(longitud) // Escribir longitud

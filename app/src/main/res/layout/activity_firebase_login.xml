@@ -21,26 +21,43 @@
 
     <Button
         android:id="@+id/btn_logout_firebase"
-        android:layout_width="139dp"
-        android:layout_height="34dp"
+        android:layout_width="167dp"
+        android:layout_height="37dp"
         android:layout_marginTop="44dp"
+        android:backgroundTint="@color/skyblue"
         android:text="CERRAR SESIÓN"
         android:visibility="invisible"
-        android:backgroundTint="@color/blue"
 
         app:layout_constraintEnd_toEndOf="@+id/btn_login_firebase"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/btn_login_firebase"
         app:layout_constraintTop_toBottomOf="@+id/btn_login_firebase" />
 
+    <Button
+        android:id="@+id/btn_ingresar"
+        android:layout_width="167dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/skyblue"
+        android:text="INGRESAR"
+
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login_firebase"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/btn_login_firebase"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bienvenido" />
+
     <TextView
         android:id="@+id/tv_bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="casual"
         android:text="Bienvenido"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_login_firebase"
         app:layout_constraintEnd_toEndOf="@+id/btn_login_firebase"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/btn_login_firebase" />
 </androidx.constraintlayout.widget.ConstraintLayout>
