@@ -65,10 +65,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Editar Perfil"
+        app:layout_constraintBottom_toTopOf="@id/btn_volver_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botón para volver al menú -->
+    <Button
+        android:id="@+id/btn_volver_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al Menú"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_celular_dueno"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

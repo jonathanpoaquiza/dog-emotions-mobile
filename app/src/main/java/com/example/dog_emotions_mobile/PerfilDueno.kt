@@ -1,6 +1,8 @@
 package com.example.dog_emotions_mobile
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -36,8 +38,30 @@ class PerfilDueno : AppCompatActivity() {
 
         // Cargar los datos desde la base de datos
         cargarPerfil()
+        val botonPerfilDueno = findViewById<Button>(R.id.btn_editar_perfil)
+        botonPerfilDueno
+            .setOnClickListener {
+                irActividad(CrudDueno::class.java)
+            }
+
+        val botonVolverMenu = findViewById<Button>(R.id.btn_volver_menu)
+        botonVolverMenu
+            .setOnClickListener {
+                irActividad(Menu::class.java)
+            }
+
+
     }
 
+    fun irActividad(
+        clase: Class<*>
+    ){
+        val intentExplicito = Intent(
+            this,
+            clase
+        )
+        startActivity(intentExplicito)
+    }
     private fun cargarPerfil() {
         // Obtener el perfil del dueño (por ejemplo, con id = 1)
         val dueno = sqliteHelperDueno.consultarDuenoPorId(1)

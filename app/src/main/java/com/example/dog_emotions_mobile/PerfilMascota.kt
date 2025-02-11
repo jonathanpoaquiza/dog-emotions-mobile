@@ -1,6 +1,8 @@
 package com.example.dog_emotions_mobile
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -45,6 +47,27 @@ class PerfilMascota : AppCompatActivity() {
 
         // Cargar los datos desde la base de datos
         cargarPerfil()
+
+        val botonPerfilMascota = findViewById<Button>(R.id.btn_editar_perfil_mascota)
+        botonPerfilMascota
+            .setOnClickListener {
+                irActividad(CrudMascota::class.java)
+            }
+        val botonVolverMenu = findViewById<Button>(R.id.btn_volver_menu_mascota)
+        botonVolverMenu
+            .setOnClickListener {
+                irActividad(Menu::class.java)
+            }
+    }
+
+    fun irActividad(
+        clase: Class<*>
+    ){
+        val intentExplicito = Intent(
+            this,
+            clase
+        )
+        startActivity(intentExplicito)
     }
 
     private fun cargarPerfil() {

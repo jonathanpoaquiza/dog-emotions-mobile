@@ -27,19 +27,19 @@ class Menu : AppCompatActivity() {
         val botonPerfilMascota = findViewById<Button>(R.id.btn_mascota)
         botonPerfilMascota
             .setOnClickListener {
-                irActividad(PerfilDueno::class.java)
+                irActividad(PerfilMascota::class.java)
             }
 
         val botonUbicacion = findViewById<Button>(R.id.btn_ubicacion)
         botonUbicacion
             .setOnClickListener {
-                irActividad(PerfilDueno::class.java)
+                irActividad(Ubicacion::class.java)
             }
 
         val botonGaleria = findViewById<Button>(R.id.btn_galeria)
         botonGaleria
             .setOnClickListener {
-                irActividad(PerfilDueno::class.java)
+                irActividad(Galeria::class.java)
             }
 
     }

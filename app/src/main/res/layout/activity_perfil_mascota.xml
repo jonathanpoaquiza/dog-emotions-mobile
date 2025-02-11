@@ -9,17 +9,18 @@
     tools:context=".PerfilMascota">
 
     <!-- Raza de la mascota -->
+
     <ImageView
         android:id="@+id/iv_perfil_mascota"
         android:layout_width="318dp"
         android:layout_height="261dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
         android:contentDescription="Foto de la mascota"
         android:src="@drawable/perfil_mascota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="72dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -106,7 +107,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tv_raza_mascota"
-    app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_raza_mascota"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <Button
+        android:id="@+id/btn_volver_menu_mascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="64dp"
+        android:text="Volver al Menú"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_editar_perfil_mascota" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
