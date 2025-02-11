@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permisos de ubicación -->
+    <!-- Permisos de ubicación y Internet -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -21,8 +22,8 @@
         <activity android:name=".Galeria" android:exported="false" />
         <activity android:name=".PerfilMascota" android:exported="false" />
         <activity android:name=".PerfilDueno" android:exported="false" />
-        <activity android:name=".Ubicacion" android:exported="false" />
-        <activity android:name=".MapsActivity" android:exported="false" android:label="@string/title_activity_maps" />
+        <activity android:name=".Ubicacion" android:exported="true" />
+        <activity android:name=".MapsActivity" android:exported="true" android:label="@string/title_activity_maps" />
         <activity android:name=".Menu" android:exported="false" />
         <activity android:name=".FirebaseLogin" android:exported="false" />
 
@@ -41,7 +42,7 @@
         <!-- Clave de la API de Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyBGvKLWbBsLKrju714HuX6O4Lu3FFCEeHs" />
 
     </application>
 </manifest>

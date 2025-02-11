@@ -15,27 +15,27 @@
         android:layout_width="318dp"
         android:layout_height="261dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="56dp"
         android:contentDescription="Foto de la mascota"
         android:src="@drawable/perfil_mascota"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Edad de la mascota -->
     <TextView
         android:id="@+id/tv_nombre_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="Nombre de la Mascota"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/iv_perfil_mascota" />
+        app:layout_constraintTop_toBottomOf="@id/iv_perfil_mascota" />
 
-    <!-- Edad de la mascota -->
     <TextView
         android:id="@+id/tv_raza_mascota"
         android:layout_width="wrap_content"
@@ -52,63 +52,60 @@
         android:id="@+id/tv_edad_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="284dp"
-        android:text="Edad: años"
+        android:layout_marginBottom="348dp"
+        android:text="00 años"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_peso_mascota"
         app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_peso_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="284dp"
-        android:text="Peso: kg"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="348dp"
+        android:text="00 kg"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_tamano_mascota"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/tv_tamano_mascota" />
 
     <TextView
         android:id="@+id/tv_tamano_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="284dp"
-        android:text="Tamaño: cm"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="348dp"
+        android:text="00 cm"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_color_mascota"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/tv_color_mascota" />
 
     <TextView
         android:id="@+id/tv_color_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="284dp"
+        android:layout_marginBottom="348dp"
         android:text="Color"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_editar_perfil_mascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="208dp"
+        android:backgroundTint="@color/green"
         android:text="Editar Perfil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_raza_mascota"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.251" />
 
     <Button
         android:id="@+id/btn_volver_menu_mascota"
@@ -116,12 +113,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/skyblue"
         android:text="Volver al Menú"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_editar_perfil_mascota" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_editar_perfil_mascota"
+        app:layout_constraintVertical_bias="0.203" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

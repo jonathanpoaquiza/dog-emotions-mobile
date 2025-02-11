@@ -78,10 +78,10 @@ class PerfilMascota : AppCompatActivity() {
             // Asignar los valores a los TextView
             tvNombreMascota.text = mascota.nombre
             tvRazaMascota.text = mascota.raza
-            tvEdadMascota.text = "Edad: ${mascota.edad} años"
-            tvPesoMascota.text = "Peso: ${mascota.peso} kg"
-            tvTamanoMascota.text = "Tamaño: ${mascota.tamano} cm"
-            tvColorMascota.text = "Color: ${mascota.color}"
+            tvEdadMascota.text = "${mascota.edad} años"
+            tvPesoMascota.text = "${mascota.peso} kg"
+            tvTamanoMascota.text = "${mascota.tamano} cm"
+            tvColorMascota.text = "${mascota.color}"
 
             // Puedes asignar la imagen de la mascota (si existe en el recurso)
             // ivPerfilMascota.setImageResource(mascota.imagenResourceId)

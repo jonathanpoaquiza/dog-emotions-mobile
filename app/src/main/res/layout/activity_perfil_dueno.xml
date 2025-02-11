@@ -9,19 +9,21 @@
     tools:context=".PerfilDueno">
 
     <!-- Imagen del dueño -->
+
+    <!-- Nombre del dueño -->
+
     <ImageView
         android:id="@+id/iv_perfil_dueno"
         android:layout_width="277dp"
         android:layout_height="230dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="164dp"
         android:contentDescription="Foto del dueño"
         android:src="@drawable/perfil_dueno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Nombre del dueño -->
     <TextView
         android:id="@+id/tv_nombre_dueno"
         android:layout_width="wrap_content"
@@ -59,24 +61,30 @@
         app:layout_constraintTop_toBottomOf="@id/tv_correo_dueno" />
 
     <!-- Botón para editar perfil del dueño -->
+
+    <!-- Botón para volver al menú -->
+
     <Button
         android:id="@+id/btn_editar_perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/green"
         android:text="Editar Perfil"
         app:layout_constraintBottom_toTopOf="@id/btn_volver_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Botón para volver al menú -->
     <Button
         android:id="@+id/btn_volver_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/skyblue"
         android:text="Volver al Menú"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
