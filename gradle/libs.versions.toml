@@ -13,6 +13,8 @@ googleFirebaseAppdistribution = "5.1.1"
 googleGmsGoogleServices = "4.4.2"
 googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 playServicesMaps = "19.0.0"
+firebaseAuth = "23.1.0"
+firebaseUiAuth = "7.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,6 +26,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-ui-auth = {group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
