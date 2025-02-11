@@ -15,6 +15,7 @@
         android:backgroundTint="@color/green"
         android:fontFamily="serif"
         android:text="EMPECEMOS   >"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="normal"
