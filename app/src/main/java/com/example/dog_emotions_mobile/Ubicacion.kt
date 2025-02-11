@@ -3,7 +3,16 @@ package com.example.dog_emotions_mobile
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffXfermode
+import android.graphics.Rect
+import android.graphics.RectF
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -16,6 +25,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
@@ -131,18 +141,20 @@ class Ubicacion : AppCompatActivity() {
         }
     }
 
-    private fun moverUbicacion(lat: Double, lng: Double, titulo: String, color: Float) {
+    private fun moverUbicacion(lat: Double, lng: Double, titulo: String, iconoResId: Int) {
         val ubicacion = LatLng(lat, lng)
-        val marcador = anadirMarcador(ubicacion, titulo, color)
+        val marcador = anadirMarcador(ubicacion, titulo, iconoResId)
         marcador.tag = titulo
     }
 
-    private fun anadirMarcador(latLang: LatLng, title: String, color: Float): Marker {
+    private fun anadirMarcador(latLang: LatLng, title: String, iconoResId: Int): Marker {
+        // Crear un ícono circular de 50x50 píxeles
+        val iconoCircular = crearIconoCircular(resources, iconoResId, 50, 50)
         return mapa.addMarker(
             MarkerOptions()
                 .position(latLang)
                 .title(title)
-                .icon(BitmapDescriptorFactory.defaultMarker(color)) // Asignar color al marcador
+                .icon(iconoCircular) // Usar el ícono circular
         )!!
     }
 
@@ -198,9 +210,9 @@ class Ubicacion : AppCompatActivity() {
             if (latitudMascota != 0.0 && longitudMascota != 0.0 &&
                 latitudDuenio != 0.0 && longitudDuenio != 0.0
             ) {
-                // Agregar marcadores con colores personalizados
-                moverUbicacion(latitudMascota, longitudMascota, nombreMascota, BitmapDescriptorFactory.HUE_BLUE)
-                moverUbicacion(latitudDuenio, longitudDuenio, nombreDuenio, BitmapDescriptorFactory.HUE_GREEN)
+                // Agregar marcadores con íconos personalizados
+                moverUbicacion(latitudMascota, longitudMascota, nombreMascota, R.drawable.mascota1) // Ícono de mascota
+                moverUbicacion(latitudDuenio, longitudDuenio, nombreDuenio, R.drawable.perfil_dueno) // Ícono de dueño
 
                 // Trazar una línea entre los marcadores
                 trazarLineaEntreMarcadores(latitudDuenio, longitudDuenio, latitudMascota, longitudMascota)
@@ -222,5 +234,55 @@ class Ubicacion : AppCompatActivity() {
         val latitudIntermedia = (lat1 + lat2) / 2
         val longitudIntermedia = (lng1 + lng2) / 2
         return LatLng(latitudIntermedia, longitudIntermedia)
+    }
+
+    private fun redimensionarImagen(resources: Resources, resId: Int, ancho: Int, alto: Int): Bitmap {
+        // Cargar la imagen original
+        val opciones = BitmapFactory.Options().apply {
+            inJustDecodeBounds = true
+        }
+        BitmapFactory.decodeResource(resources, resId, opciones)
+
+        // Calcular el ratio de escalado
+        val escala = min(opciones.outWidth / ancho, opciones.outHeight / alto)
+
+        // Cargar la imagen redimensionada
+        val opcionesRedimensionadas = BitmapFactory.Options().apply {
+            inJustDecodeBounds = false
+            inSampleSize = escala
+        }
+        return BitmapFactory.decodeResource(resources, resId, opcionesRedimensionadas)
+    }
+
+    private fun recortarImagenCircular(bitmap: Bitmap): Bitmap {
+        // Crear un Bitmap cuadrado para el círculo
+        val output = Bitmap.createBitmap(bitmap.width, bitmap.height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(output)
+
+        // Pintar el círculo
+        val paint = Paint().apply {
+            isAntiAlias = true
+        }
+        val rect = Rect(0, 0, bitmap.width, bitmap.height)
+        val rectF = RectF(rect)
+
+        // Dibujar el círculo
+        canvas.drawARGB(0, 0, 0, 0)
+        canvas.drawOval(rectF, paint)
+
+        // Aplicar el modo de composición para recortar la imagen
+        paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
+        canvas.drawBitmap(bitmap, rect, rect, paint)
+
+        return output
+    }
+
+    private fun crearIconoCircular(resources: Resources, resId: Int, ancho: Int, alto: Int): BitmapDescriptor {
+        // Redimensionar la imagen
+        val bitmapRedimensionado = redimensionarImagen(resources, resId, ancho, alto)
+        // Recortar la imagen en forma de círculo
+        val bitmapCircular = recortarImagenCircular(bitmapRedimensionado)
+        // Convertir a BitmapDescriptor
+        return BitmapDescriptorFactory.fromBitmap(bitmapCircular)
     }
 }

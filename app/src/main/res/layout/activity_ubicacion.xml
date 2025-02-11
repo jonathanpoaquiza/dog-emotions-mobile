@@ -27,7 +27,7 @@
         android:layout_marginBottom="48dp"
         android:text="Distancia entre dueño y mascota"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_volver_menu_ubicacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
